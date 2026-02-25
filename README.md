@@ -136,10 +136,6 @@ Before implementing significant decisions, invoke the think-first skill:
 This ensures mental model application before implementation.
 ```
 
-## Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ## License
 
 MIT License - see [LICENSE](LICENSE)
