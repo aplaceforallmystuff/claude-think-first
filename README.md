@@ -45,7 +45,13 @@ When you face a significant decision, this skill:
 
 ## Installation
 
-### Option 1: Copy to your Claude Code skills directory
+### Option 1: Skills CLI
+
+```bash
+npx skills add aplaceforallmystuff/claude-think-first
+```
+
+### Option 2: Copy to your Claude Code skills directory
 
 ```bash
 # Clone the repository
@@ -55,13 +61,13 @@ git clone https://github.com/aplaceforallmystuff/claude-think-first.git
 cp -r claude-think-first/skills/think-first ~/.claude/skills/
 ```
 
-### Option 2: Clone directly to skills directory
+### Option 3: Clone directly to skills directory
 
 ```bash
 git clone https://github.com/aplaceforallmystuff/claude-think-first.git ~/.claude/skills/think-first
 ```
 
-### Option 3: Manual installation
+### Option 4: Manual installation
 
 1. Create the directory: `mkdir -p ~/.claude/skills/think-first`
 2. Download [SKILL.md](skills/think-first/SKILL.md) to that directory
@@ -135,6 +141,14 @@ Before implementing significant decisions, invoke the think-first skill:
 
 This ensures mental model application before implementation.
 ```
+
+## Related Skills
+
+Part of the [aplaceforallmystuff](https://skills.sh/aplaceforallmystuff) skills collection:
+
+- **[rfu-audit](https://github.com/aplaceforallmystuff/claude-rfu-audit)** — 11-gate utility validation before investing effort
+- **[creation-guard](https://github.com/aplaceforallmystuff/claude-creation-guard)** — Prevent duplicate artifacts before creating new ones
+- **[lessons-learned](https://github.com/aplaceforallmystuff/claude-lessons-learned)** — Structured retrospectives that implement fixes
 
 ## License
 
