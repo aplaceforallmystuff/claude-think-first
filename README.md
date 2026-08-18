@@ -1,11 +1,15 @@
-# Claude Think First
+# Think First
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue)](https://claude.ai)
+*Never implement a significant decision without structured analysis first.*
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-6C5CE7)
+
+![Think First](docs/images/architecture-diagram.png)
 
 A Claude Code skill that enforces structured thinking before implementing significant decisions.
 
-## The Problem
+## Why
 
 When working quickly with AI assistance, it's tempting to jump straight to implementation. This leads to:
 
@@ -16,7 +20,33 @@ When working quickly with AI assistance, it's tempting to jump straight to imple
 
 This skill forces a pause to apply mental models before proceeding.
 
-## How It Works
+## Install
+
+```bash
+# In Claude Code:
+/plugin marketplace add aplaceforallmystuff/marketplace
+/plugin install claude-think-first@jim-christian
+```
+
+<details>
+<summary>Manual install (without the marketplace)</summary>
+
+```bash
+git clone https://github.com/aplaceforallmystuff/claude-think-first.git
+cp -r claude-think-first/skills/think-first ~/.claude/skills/
+```
+</details>
+
+## Use cases
+
+- Use it when choosing between architectural options ("Redis or PostgreSQL for caching?", "monorepo or multi-repo?").
+- Use it when making a business decision — pricing, positioning, or target market.
+- Use it when prioritizing features and deciding what to build first.
+- Use it when weighing a trade-off (speed vs quality, scope vs time).
+- Use it when considering a pivot or change of direction.
+- Use it when a decision will be hard to reverse.
+
+## How it works
 
 When you face a significant decision, this skill:
 
@@ -26,7 +56,7 @@ When you face a significant decision, this skill:
 4. **Synthesizes** insights into a clear recommendation
 5. **Proceeds** only after thoughtful analysis
 
-## Mental Models Included
+### Mental models included
 
 | Model | Best For |
 |-------|----------|
@@ -43,36 +73,17 @@ When you face a significant decision, this skill:
 | **SWOT** | Strengths, Weaknesses, Opportunities, Threats |
 | **Occam's Razor** | Simplest explanation that fits the facts |
 
-## Installation
+### Model selection guide
 
-### Option 1: Skills CLI
+| Decision Type | Use These Models |
+|--------------|------------------|
+| What to build | First Principles, Inversion, One Thing |
+| How to prioritize | Pareto, Eisenhower Matrix, Opportunity Cost |
+| Is this the right direction | Second-Order, 10-10-10, Inversion |
+| What are we missing | 5 Whys, Via Negativa, SWOT |
+| Which option to choose | Opportunity Cost, First Principles, Occam's Razor |
 
-```bash
-npx skills add aplaceforallmystuff/claude-think-first
-```
-
-### Option 2: Copy to your Claude Code skills directory
-
-```bash
-# Clone the repository
-git clone https://github.com/aplaceforallmystuff/claude-think-first.git
-
-# Copy to your Claude Code skills directory
-cp -r claude-think-first/skills/think-first ~/.claude/skills/
-```
-
-### Option 3: Clone directly to skills directory
-
-```bash
-git clone https://github.com/aplaceforallmystuff/claude-think-first.git ~/.claude/skills/think-first
-```
-
-### Option 4: Manual installation
-
-1. Create the directory: `mkdir -p ~/.claude/skills/think-first`
-2. Download [SKILL.md](skills/think-first/SKILL.md) to that directory
-
-## Usage
+## Example
 
 The skill activates when Claude detects decision moments:
 
@@ -80,8 +91,6 @@ The skill activates when Claude detects decision moments:
 - "How should we approach this?"
 - "What's the best way to..."
 - "Which option makes more sense?"
-
-### Example
 
 ```
 User: Should we use Redis or PostgreSQL for caching?
@@ -116,16 +125,6 @@ RECOMMENDATION: Try PostgreSQL-native caching first
 =================================
 ```
 
-## Model Selection Guide
-
-| Decision Type | Use These Models |
-|--------------|------------------|
-| What to build | First Principles, Inversion, One Thing |
-| How to prioritize | Pareto, Eisenhower Matrix, Opportunity Cost |
-| Is this the right direction | Second-Order, 10-10-10, Inversion |
-| What are we missing | 5 Whys, Via Negativa, SWOT |
-| Which option to choose | Opportunity Cost, First Principles, Occam's Razor |
-
 ## Integration with CLAUDE.md
 
 For automatic enforcement, add this to your `CLAUDE.md`:
@@ -152,8 +151,4 @@ Part of the [aplaceforallmystuff](https://skills.sh/aplaceforallmystuff) skills 
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
-
----
-
-**The goal: Never implement a significant decision without structured analysis first.**
+MIT — see [LICENSE](LICENSE).

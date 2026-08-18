@@ -1,6 +1,21 @@
 {
   "name": "claude-think-first",
+  "displayName": "Think First",
   "description": "Enforce mental-model application before implementing a significant decision.",
   "version": "1.0.0",
-  "author": { "name": "Jim Christian", "email": "hello@jimchristian.net" }
+  "author": {
+    "name": "Jim Christian",
+    "email": "hello@jimchristian.net",
+    "url": "https://jimchristian.net"
+  },
+  "homepage": "https://github.com/aplaceforallmystuff/claude-think-first#readme",
+  "repository": "https://github.com/aplaceforallmystuff/claude-think-first",
+  "license": "MIT",
+  "keywords": [
+    "mental-models",
+    "decision-making",
+    "strategy",
+    "trade-offs",
+    "thinking"
+  ]
 }
