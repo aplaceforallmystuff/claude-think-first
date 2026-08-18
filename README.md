@@ -25,7 +25,7 @@ This skill forces a pause to apply mental models before proceeding.
 ```bash
 # In Claude Code:
 /plugin marketplace add aplaceforallmystuff/marketplace
-/plugin install claude-think-first@jim-christian
+/plugin install claude-think-first@aplaceforallmystuff
 ```
 
 <details>
